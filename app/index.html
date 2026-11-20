@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: roadmap to the platinum, missable flags, and a guide with sources for every trophy.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23221a3d'/%3E%3Cpath d='M16 5l3.6 7.3 8 .9-5.9 5.6 1.5 7.9L16 22.9 8.8 26.7l1.5-7.9L4.4 13.2l8-.9z' fill='%23ffd166'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p style="max-width:1060px;margin:16px auto;padding:0 20px">This guide needs JavaScript to render the checklist. The trophy data is in <code>app/data/trophies.json</code> and can be read directly.</p></noscript>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+    <h1>Leonida Legend</h1>
+    <p class="sub">Every one of the 55 trophies — the official name, description and grade, a guide in our own words with its sources, and a checklist that lives in your browser. Works fully offline.</p>
+    <div class="progress-wrap" aria-label="Overall progress">
+      <div class="progress-bar"><div id="bar" class="progress-fill" style="width:0%"></div></div>
+      <p id="progress" class="progress-text">0 of 55 earned &middot; 0%</p>
+    </div>
+    <div id="gradeChips" class="chips"></div>
+  </div>
+</header>
+
+<main>
+  <section class="panel" id="roadmapPanel">
+    <h2>Roadmap to the platinum</h2>
+    <p id="roadmapIntro" class="muted"></p>
+    <p id="roadmapMissable" class="missable-note"></p>
+    <ol id="roadmap" class="roadmap"></ol>
+  </section>
+
+  <section class="panel controls-panel">
+    <div class="controls">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy name or guide text…" autocomplete="off"></label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side">Side missions</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="crime">Crime &amp; robberies</option>
+          <option value="exploration">Exploration</option>
+          <option value="misc">Odd jobs &amp; secrets</option>
+          <option value="platinum">Platinum &amp; 100%</option>
+          <option value="missable">Missable only</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="check"><input id="spoilers" type="checkbox" checked> Hide story spoilers until earned</label>
+    </div>
+    <div class="controls actions">
+      <button id="export" type="button">Export progress (.json)</button>
+      <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+      <button id="reset" type="button" class="danger">Reset all ticks</button>
+      <span id="saveState" class="muted small">Progress saves in this browser only.</span>
+    </div>
+    <p id="countLine" class="muted small"></p>
+  </section>
+
+  <section class="panel">
+    <h2>Trophy checklist <span id="listCount" class="muted small"></span></h2>
+    <div id="list" class="trophy-list"></div>
+    <p id="empty" class="muted" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Sources &amp; notes</h2>
+    <p class="muted">Official trophy names, descriptions and grades are shown as PlayStation publishes them, via the trackers that mirror the PlayStation list. Every guide below is written in our own words for this guide and cites where each fact comes from — a source is cited, never copied. No Rockstar Games logo, official artwork, box art or game screenshot is used anywhere in this guide; the look is our own.</p>
+    <ul id="sourceList" class="sources"></ul>
+    <p class="muted small">List status: 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden on PlayStation until earned; no online trophies. Rockstar, Sony and Microsoft had not published a separate official list when this guide was compiled (18 Nov 2026); the list here follows Exophase and PSNProfiles, which agree on every name, description and grade. Counts (42 Shooting Range challenges, 397 stunts, 18 card sets, 80 challenges) come from those trackers and the guides cited. The five hidden trophies GameMapa listed as still unsolved at launch are marked in their guides as unconfirmed — check the cited guides for the latest community findings. This is an unofficial fan guide, not affiliated with Rockstar Games, Sony or PlayStation.</p>
+  </section>
+</main>
+
+<footer class="muted small">
+  Leonida Legend — an offline, open-source GTA VI trophy guide &amp; tracker. Data: <code>app/data/trophies.json</code>. Progress is stored only in this browser (localStorage) unless you export it.
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
